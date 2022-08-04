@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% load static %}
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Player List</title>
+        <link rel="stylesheet" href="{% static 'playerchart/css/style.css' %}" type="text/css">
+        <link rel="icon" href="{% static 'playerchart/assets/the_wizard.png' %}" type="image/favicon.ico">
+
+    </head>
+    <body>
+        <h1 id="playerListTitle">Player List</h1>
+        
+        <a id="playerCreationLink" href="/playercreation/">⟵ Player Creation</a> 
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Class</th>
+                <th>Strength</th>
+                <th>Intelligence</th>
+                <th>Faith</th>
+                <th>Dexterity</th>
+                <th>Vigor</th>
+            </tr>
+            {% for player in player_stats %}
+            <tr>
+                <td>{{player.name}}</td>
+                <td>{{player.player_class}}</td>
+                <td>{{player.strength}}</td>
+                <td>{{player.intelligence}}</td>
+                <td>{{player.faith}}</td>
+                <td>{{player.dexterity}}</td>
+                <td>{{player.vigor}}</td>
+                <form action="/playercreation/playerindex/deletePlayer/{{player.id}}/" method="post" id="deleteButton">{% csrf_token %}
+                    <td>
+                        <input type="submit" value="Delete" id=deleteButtonIcon />
+                    </td>
+                </form>
+
+            </tr>
+            
+            {% endfor %}
+        </table>
+    </body>
+</html>

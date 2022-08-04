@@ -1,0 +1,113 @@
+h1#playerListTitle {
+
+color: #ffffff;
+
+}
+
+input {
+
+display: block;
+}
+
+label {
+
+display: inline;
+}
+
+body {
+background-image: url('../assets/rpg_bar.jpg');
+background-repeat: no-repeat;
+padding: 1rem 4rem;
+width: 450px;
+margin: 0 auto;
+font-family: 'La Belle Aurore', cursive;
+}
+
+form {
+width: 15rem;
+padding: 8rem 2rem;
+margin: 0 auto;
+}
+
+section {
+background-image: url('../assets/scroll.png');
+background-repeat: no-repeat;
+background-size: 30rem 40rem;
+height: 650px;
+width: 550px;
+}
+
+input:not(#submitPlayerButton):not(#deleteButtonIcon) {
+border: none;
+border-bottom: 2px solid currentColor;
+background: none;
+}
+
+input#submitPlayerButton {
+background-color: #9a6d38;
+font-family: 'La Belle Aurore', cursive;
+font-size: 1rem;
+border: 1px solid #000000;
+color: #ffffff;
+margin: 1rem 1rem;
+padding: .5rem 2rem;
+letter-spacing: 1px;
+}
+
+a {
+margin: 1rem 1.5rem;
+text-decoration: none;
+}
+
+a:visited{
+color: #000000;
+}
+
+a#playerCreationLink {
+color: #ffffff;
+margin: 1rem 0;
+}
+
+input#submitPlayerButton:hover{
+background-color: #2f2504;
+box-shadow: 2px 2px #000000;
+transition: 2s;
+}
+
+table {
+background-color: #9a6d38;
+border: 1px solid black;
+padding: 0em 2em;
+border-collapse: collapse;
+}
+
+tr {
+border-bottom: 1px solid black;
+}
+
+td {
+padding: 2em;
+}
+
+th {
+letter-spacing: 1px;
+}
+
+form#deleteButton{
+    display: inline;
+}
+
+#deleteButtonIcon {
+    display: inline;
+    background-color: #594f3b;
+    color: #ffffff;
+
+    border: none;
+    font-family: 'La Belle Aurore', cursive;
+}
+
+input#deleteButtonIcon:hover {
+    background-color: #ff0000;
+    cursor: pointer;
+
+}

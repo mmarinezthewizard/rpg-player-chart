@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% load static %}
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>RPG player chart</title>
+        <link rel="stylesheet" href="{% static 'playerchart/css/style.css' %}" type="text/css">
+        <link rel="icon" href="{% static 'playerchart/assets/the_wizard.png' %}" type="image/favicon.ico">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+        <script charset="utf-8" src="../static/playerchart/js/script.js"></script>
+    </head>
+    <body>
+        <section>
+            <form method="post">{% csrf_token %}
+                {{ form }}
+            
+                <input type="submit" value="Create" id="submitPlayerButton" onclick="playerCreationAlert()"/>
+                <a href="playerindex/">Existing Players</a> 
+            </form>
+    
+        </section>
+    </body>
+</html>
